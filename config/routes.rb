@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   #constraints subdomian: 'api' do
   #namespace :api, path: '/', defaults: { format: :xml } do
-      resources :providers, except: [:new, :edit], :defaults => { :format => 'json' }
+      resources :providers, except: [:new, :edit], defaults: { format: :json }
   #end
   #end
   
