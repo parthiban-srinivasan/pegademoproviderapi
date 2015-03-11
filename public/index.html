@@ -1,0 +1,77 @@
+<!DOCTYPE html>>
+<html>
+  <head>
+    <title>Provider Portal</title>
+    <style type="text/css" media="screen">
+      html, body {
+        background-color: #4B7399;
+        font-family: Verdana, Helvetica, Arial;
+        font-size: 14px;
+      }
+      a { color: #0000FF; }
+
+      #container {
+        width: 75%;
+        margin: 0 auto;
+        background-color: #FFF;
+        padding: 20px 40px;
+        border: solid 1px black;
+        margin-top: 20px;
+      }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        function addProvider(provider) {
+          $('#providers').append('<li>' + " Record ID " + provider.id + " Provider number " + provider.provider_num + " Routing number " + provider.routing_num + " Bank account number " + provider.bank_account_num + " EFT indicator " + provider.eft_ind + " Bulking indicator " + provider.bulking_ind + " Suppression indicator " + provider.suppression_ind + '</ul>');
+        }
+        
+       // function addPayline(payline) {
+       //   $('#paylines').append('<li>' + " Payline " + payline.id + " claim number" + payline.claim_id + " amount " + payline.payment_amount + '</ul>');
+       //  }
+
+        $('#new_provider').submit(function(e) {
+          $.post('/providers', $(this).serialize(), addProvider);
+          this.reset();
+          e.preventDefault();
+        });
+        
+       // $('#new_payline').submit(function(e) {
+       //      $.post('/paylines', $(this).serialize(), addPayline);
+       //     this.reset();
+       //    e.preventDefault();
+     // });
+
+        $.getJSON('/providers', function(providers) {
+          $.each(providers, function() { addProvider(this); });
+        });
+        
+      //  $.getJSON('/paylines', function(paylines) {
+      //  $.each(paylines, function() { addPayline(this); });
+       // });
+      });
+    </script>
+  <body>
+    <div id="container">
+      <h1>Provider Maintenance</h1>
+      <form id="new_provider">
+        <input type="string" name="provider[provider_num]" id="provider_provider_num">
+        <input type="integer" name="provider[routing_num]" id="provider_routing_num">
+        <input type="integer" name="provider[bank_account_num]" id="provider_bank_account_num">
+        <input type="string" name="provider[eft_ind]" id="provider_eft_ind">
+        <input type="string" name="provider[bulking_ind]" id="provider_bulking_ind">
+        <input type="string" name="provider[supression_ind]" id="provider_suppression_ind">
+        <input type="submit" value="Add Provider">
+      </form>
+      <ul id="providers"></ul>
+      <!-- <h1>Payment Line items</h1>
+      <form id="new_payline">
+        <input type="integer" name="payline[payline_id]" id="payline_id">
+        <input type="integer" name="payline[claim_id]" id="payline_claim_id">
+        <input type="decimal" name="payline[payment_amount]" id="payline_payment_amount">
+        <input type="submit" value="Add Payline">
+      </form>
+      <ul id="paylines"></ul> --> 
+    </div>
+  </body>
+</html>
