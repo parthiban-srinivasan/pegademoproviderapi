@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20150311041051) do
 
   create_table "providers", force: true do |t|
     t.string   "provider_num"
-    t.integer  "routing_num"
-    t.integer  "bank_account_num"
+    t.string  "routing_num"
+    t.string  "bank_account_num"
     t.string   "eft_ind"
     t.string   "bulking_ind"
     t.string   "suppression_ind"
