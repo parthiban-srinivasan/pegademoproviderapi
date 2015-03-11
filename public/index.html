@@ -23,7 +23,7 @@
     <script type="text/javascript" charset="utf-8">
       $(function() {
         function addProvider(provider) {
-          $('#providers').append('<li>' + " Record ID " + provider.id + " Provider number " + provider.provider_num + " Routing number " + provider.routing_num + " Bank account number " + provider.bank_account_num + " EFT indicator " + provider.eft_ind + " Bulking indicator " + provider.bulking_ind + " Suppression indicator " + provider.suppression_ind + '</ul>');
+          $('#providers').append('<li>' + " Record ID " + provider.id + " Provider number " + provider.provider_num + " Routing number " + provider.routing_num + " Bank account number " + provider.bank_account_num + " EFT indicator " + provider.eft_ind + " Bulking indicator " + provider.bulking_ind + " Suppression indicator " + provider.suppression_ind + "Speciality indicator" + provider.speciality_ind + "Radiology Speciality" + provider.radiology_speciality +'</ul>');
         }
         
        // function addPayline(payline) {
@@ -61,6 +61,8 @@
         EFT Ind <input type="string" name="provider[eft_ind]" placeholder=" Y or N" id="provider_eft_ind">
         Bulking Ind <input type="string" name="provider[bulking_ind]"  placeholder=" Y or N" id="provider_bulking_ind">
         Suppression Ind <input type="string" name="provider[supression_ind]" placeholder=" Y or N" id="provider_suppression_ind">
+        Speciality_ind <input type="string" name="provider[speciality_ind]" placeholder=" Y or N" id="provider_speciality_ind">
+        Radiology_speciality <input type="string" name="provider[radiology_speciality]" placeholder=" Y or N" id="provider_radiology_speciality">
         <input type="submit" value="Add Provider">
       </form>
       <ul id="providers"></ul>

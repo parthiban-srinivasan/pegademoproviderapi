@@ -66,7 +66,7 @@
     end
 
     def provider_params
-      params.require(:provider).permit(:provider_num, :routing_num, :bank_account_num, :eft_ind, :bulking_ind, :suppression_ind)
+      params.require(:provider).permit(:provider_num, :routing_num, :bank_account_num, :eft_ind, :bulking_ind, :suppression_ind, :speciality_ind, :radiology_speciality)
     end
  end
 #end

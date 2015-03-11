@@ -7,6 +7,8 @@ class CreateProviders < ActiveRecord::Migration
       t.string :eft_ind
       t.string :bulking_ind
       t.string :suppression_ind
+      t.string :speciality_ind
+      t.string :radiology_speciality
 
       t.timestamps
     end
