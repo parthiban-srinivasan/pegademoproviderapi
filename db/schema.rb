@@ -15,13 +15,15 @@ ActiveRecord::Schema.define(version: 20150311041051) do
 
   create_table "providers", force: true do |t|
     t.string   "provider_num"
-    t.string  "routing_num"
-    t.string  "bank_account_num"
+    t.string   "routing_num"
+    t.string   "bank_account_num"
     t.string   "eft_ind"
     t.string   "bulking_ind"
     t.string   "suppression_ind"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "providers", ["provider_num"], name: "index_providers_on_provider_num"
 
 end
