@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hbor_id: MyString
+  routing_num: 1
+  bank_account_num: 1
+  eft_ind: MyString
+  bulking_ind: MyString
+  suppression_ind: MyString
+
+two:
+  hbor_id: MyString
+  routing_num: 1
+  bank_account_num: 1
+  eft_ind: MyString
+  bulking_ind: MyString
+  suppression_ind: MyString
