@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   #constraints subdomian: 'api' do
   #namespace :api, path: '/', defaults: { format: :xml } do
-  resources :providers, except: [:new, :edit], defaults: { format: :xml }
+  resources :providers, except: [:new, :edit], defaults: { format: :json }
   #end
   #end
   
@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
+  #root 'provider#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

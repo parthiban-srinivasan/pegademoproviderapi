@@ -55,12 +55,12 @@
     <div id="container">
       <h1>Provider Maintenance</h1>
       <form id="new_provider">
-        <input type="string" name="provider[provider_num]" id="provider_provider_num">
-        <input type="integer" name="provider[routing_num]" id="provider_routing_num">
-        <input type="integer" name="provider[bank_account_num]" id="provider_bank_account_num">
-        <input type="string" name="provider[eft_ind]" id="provider_eft_ind">
-        <input type="string" name="provider[bulking_ind]" id="provider_bulking_ind">
-        <input type="string" name="provider[supression_ind]" id="provider_suppression_ind">
+        Provider # <input type="string" name="provider[provider_num]" placeholder="provider number" id="provider_provider_num">
+        Routing # <input type="integer" name="provider[routing_num]" placeholder="routing number" id="provider_routing_num">
+        Bank Account # <input type="integer" name="provider[bank_account_num]" placeholder="bank account" id="provider_bank_account_num">
+        EFT Ind <input type="string" name="provider[eft_ind]" placeholder=" Y or N" id="provider_eft_ind">
+        Bulking Ind <input type="string" name="provider[bulking_ind]"  placeholder=" Y or N" id="provider_bulking_ind">
+        Suppression Ind <input type="string" name="provider[supression_ind]" placeholder=" Y or N" id="provider_suppression_ind">
         <input type="submit" value="Add Provider">
       </form>
       <ul id="providers"></ul>
