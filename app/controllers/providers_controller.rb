@@ -8,7 +8,7 @@ class ProvidersController < ApplicationController
   # GET /providers.json
   # GET /providers.xml
   def index
-    @providers = Provier.all
+    @providers = Provider.all
     
     respond_to do |format|
        format.json {render json: @providers}
