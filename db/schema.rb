@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150311041051) do
 
   create_table "providers", force: true do |t|
-    t.string   "hbor_id"
+    t.string   "provider_num"
     t.integer  "routing_num"
     t.integer  "bank_account_num"
     t.string   "eft_ind"

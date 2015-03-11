@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   
   #constraints subdomian: 'api' do
-  #namespace :api, path: '/', defaults: { format: :json } do
-  #     resources :payments, except: [:new, :edit]
-  #  end
-  resources :providers, except: [:new, :edit]
+  namespace :api, path: '/', defaults: { format: :xml } do
+      resources :providers, except: [:new, :edit]
+      end
   #end
   
   # The priority is based upon order of creation: first created -> highest priority.

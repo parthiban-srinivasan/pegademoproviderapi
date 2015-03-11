@@ -1,7 +1,7 @@
 class CreateProviders < ActiveRecord::Migration
   def change
     create_table :providers do |t|
-      t.string :provider_id
+      t.string :provider_num
       t.integer :routing_num
       t.integer :bank_account_num
       t.string :eft_ind
@@ -11,7 +11,7 @@ class CreateProviders < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index "providers", ["provider_id"], name: "index_providers_on_provider_id"
+    add_index "providers", ["provider_num"], name: "index_providers_on_provider_num"
     
   end
 end
